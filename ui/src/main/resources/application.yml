@@ -1,0 +1,13 @@
+server.port: 8080
+server.address: 127.0.0.1
+security:
+#  user:
+#    password: password
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:9999/uaa/oauth/token
+      userAuthorizationUri: http://localhost:9999/uaa/oauth/authorize
+      clientId: myclient
+      clientSecret: myclientsecret
+    resource:
+      userInfoUri: http://localhost:9999/uaa/user
