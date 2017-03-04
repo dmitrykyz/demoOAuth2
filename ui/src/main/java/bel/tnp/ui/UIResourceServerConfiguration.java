@@ -23,6 +23,8 @@ public class UIResourceServerConfiguration extends WebSecurityConfigurerAdapter 
                 .logout().and()
                 .authorizeRequests()
                 .antMatchers("/index.html").permitAll()
+                .antMatchers("/login.html").permitAll()
+                .antMatchers("/webjars/**").permitAll()
                 .antMatchers("/resource").permitAll()
                 .antMatchers("/samplestring").access("hasRole('USER')")
                 .antMatchers("/samplestringAdmin").access("hasRole('ADMIN')")
